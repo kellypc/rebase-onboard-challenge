@@ -36,9 +36,8 @@ O sistema oferece consultas à API do IBGE e oferece resultados das buscas no te
 5. 
 6. 
 
-
 O projeto foi construído com TDD (Test Driven Development).
-
+Para instalar o rspec consulte a documentação deles: https://github.com/rspec/rspec
 1. Execute todos os  testes
 
 	~~~ sh
