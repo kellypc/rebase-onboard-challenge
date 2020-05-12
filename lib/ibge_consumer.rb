@@ -12,6 +12,8 @@ class IBGEConsumer
 
   def list_names_by_uf(name, uf)
     uf_details = ufs_list.select {|x| x["sigla"] == uf}.first
+    return if uf_details.nil?
+
     response = HTTParty.get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/#{name}?localidade=#{uf_details['id']}")
     response.parsed_response
   end
