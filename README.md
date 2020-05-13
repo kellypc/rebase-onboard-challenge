@@ -12,6 +12,8 @@ O sistema oferece consultas à API do IBGE e oferece resultados das buscas no te
 * [Instalação](#instalacao)
 * [Desafios Propostos](#Desafios)
 * [Testes com RSpec](#testes-com-rspec)
+* [Lista de gems utilizadas](#lista_de_gems_utilizadas)
+
 
 ## Instalação
 
@@ -29,12 +31,9 @@ O sistema oferece consultas à API do IBGE e oferece resultados das buscas no te
   
 ## Desafios
 
-1.
-2. 
-3. 
-4. 
-5. 
-6. 
+1. Consumir a API do IBGE Nomes e Listar os nomes das Ufs.
+2. Listar os nomes da cidade escolhida 
+3. Mostrar o percentual que os resultados representam
 
 O projeto foi construído com TDD (Test Driven Development).
 Para instalar o rspec consulte a documentação deles: https://github.com/rspec/rspec
@@ -43,3 +42,12 @@ Para instalar o rspec consulte a documentação deles: https://github.com/rspec/
 	~~~ sh
 	$ bundle exec rspec
 	~~~
+	
+## Lista de gems utilizadas
+ gem 'rspec', 
+ gem 'rake', 
+ gem 'httparty', 
+ gem 'byebug'
+ gem 'capybara', 
+ gem 'terminal-table'
+
