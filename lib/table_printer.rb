@@ -56,4 +56,6 @@ class TablePrinter
     end
     puts table
   end
+
+
 end

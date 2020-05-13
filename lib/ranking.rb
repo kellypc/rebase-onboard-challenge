@@ -22,4 +22,64 @@ class Ranking
     male_names = ibge_consumer.list_names_by_gender(name, uf_code, "M")
     TablePrinter.males_ranking(name, male_names)
   end
+
+  def self.name_by_city_options
+    ibge_consumer_city = IBGEConsumerCity.new
+
+    puts "\nQual nome voce deseja consultar?"
+    name = gets.chomp
+
+    puts "\nInforme o nome da cidade?"
+    name_city = gets.chomp
+
+    cities = ibge_consumer_city.list_names_by_city(name, name_city)
+    cities.each do |city|
+      puts "#{city["id"]} - #{city["nome"]}"
+    end
+
+    #Ranking Geral
+    table = Terminal::Table.new do |t|
+      t.title = "Ranking para o nome #{name} na cidade de #{name_city}"
+      t.headings = ['Periodo', 'Frequencia']
+
+      next if cities[0].nil?
+
+      cities[0]["res"].each do |item|
+        t.add_row [item["periodo"].delete("["), item["frequencia"]]
+        t << :separator
+      end
+    end
+    puts table
+
+    #Ranking por sexo feminino
+    # cities = ibge_consumer_city.list_names_by_gender(name, name_city, "F")
+    # female = cities.sexo
+    # table = Terminal::Table.new do |t|
+    #   t.title = "Ranking para o nome #{name} - Mulheres"
+    #   t.headings = ['Periodo', 'Frequencia']
+    #
+    #   next if female[0].nil?
+    #
+    #   female[0]["res"].each do |item|
+    #     t.add_row [item["periodo"].delete("["), item["frequencia"]]
+    #     t << :separator
+    #   end
+    # end
+    # puts table
+
+    # #Ranking por sexo feminino
+    # table = Terminal::Table.new do |t|
+    #   t.title = "Ranking para o nome #{name} - Homens"
+    #   t.headings = ['Periodo', 'Frequencia']
+    #
+    #   next if female[0].nil?
+    #
+    #   male_names[0]["res"].each do |item|
+    #     t.add_row [item["periodo"].delete("["), item["frequencia"]]
+    #     t << :separator
+    #   end
+    # end
+    # puts table
+
+  end
 end
