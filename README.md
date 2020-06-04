@@ -16,6 +16,8 @@ O sistema oferece consultas à API do IBGE e oferece resultados das buscas no te
 
 
 ## Instalação
+Obs: Para esse projeto utilizei o sistema operacional MACOS Catalina
+Usei ora o editor de texto Atom junto com o Iterm  e ora com o VS Code.
 
 1. Clone o projeto.
 
@@ -31,6 +33,12 @@ O sistema oferece consultas à API do IBGE e oferece resultados das buscas no te
   
 ## Desafios
 
+Esse projeto não conta com interface do usuário, sendo assim, realizaremos a consulta pelo terminal:
+~~~ sh
+$ ruby lib/primeiro_desafio.rb
+~~~
+
+Abra o arquivo no terminal 
 1. Consumir a API do IBGE Nomes e Listar os nomes das Ufs.
 2. Listar os nomes da cidade escolhida 
 3. Mostrar o percentual que os resultados representam
