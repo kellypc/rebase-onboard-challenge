@@ -59,3 +59,4 @@ Para instalar o rspec consulte a documentação deles: https://github.com/rspec/
  gem 'capybara', 
  gem 'terminal-table'
 
+> Status do Projeto: Em desenvolvimento :warning:
