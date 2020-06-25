@@ -18,6 +18,8 @@ O sistema oferece consultas à API do IBGE e oferece resultados das buscas no te
 ## Instalação
 Obs: Para esse projeto utilizei o sistema operacional MACOS Catalina
 Usei ora o editor de texto Atom junto com o Iterm  e ora com o VS Code.
+Estamos usando a versão do Ruby 2.6.3 e usamos o rvm para fazer o controle de versões ruby,
+segue a documentação: https://rvm.io/rvm/install
 
 1. Clone o projeto.
 
